@@ -11,6 +11,7 @@ import Services from "@/pages/services";
 import HowItWorks from "@/pages/how-it-works";
 import Technology from "@/pages/technology";
 import Contact from "@/pages/contact";
+import Login from "@/pages/login";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/technology" component={Technology} />
       <Route path="/contact" component={Contact} />
+      <Route path="/login" component={Login} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -32,11 +34,18 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="min-h-screen flex flex-col">
-          <Navbar />
-          <main className="flex-grow">
-            <Router />
-          </main>
-          <Footer />
+          <Switch>
+            <Route path="/login">
+              <Router />
+            </Route>
+            <Route>
+              <Navbar />
+              <main className="flex-grow">
+                <Router />
+              </main>
+              <Footer />
+            </Route>
+          </Switch>
         </div>
         <Toaster />
       </TooltipProvider>

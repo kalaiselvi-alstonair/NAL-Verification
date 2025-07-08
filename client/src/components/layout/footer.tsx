@@ -3,7 +3,7 @@ import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-800 text-white py-16">
+    <footer className="nav-theme text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
@@ -15,20 +15,20 @@ export default function Footer() {
               />
               <h3 className="text-2xl font-bold">NAL India</h3>
             </div>
-            <p className="text-slate-300 mb-4">
+            <p className="text-contrast mb-4">
               India's most trusted property verification platform, powered by AI and automation.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+              <a href="#" className="text-contrast hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+              <a href="#" className="text-contrast hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+              <a href="#" className="text-contrast hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-300 hover:text-white transition-colors">
+              <a href="#" className="text-contrast hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>

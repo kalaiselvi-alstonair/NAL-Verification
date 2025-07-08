@@ -4,42 +4,71 @@ import { Card, CardContent } from "@/components/ui/card";
 import FeatureCard from "@/components/ui/feature-card";
 import TestimonialCard from "@/components/ui/testimonial-card";
 import StatsCard from "@/components/ui/stats-card";
-import { Shield, Brain, Clock, CheckCircle } from "lucide-react";
+import { Shield, Brain, Clock, CheckCircle, Zap, FileSearch, Play } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="gradient-primary text-white py-20 lg:py-32">
+      <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
-            <div className="mb-8 lg:mb-0">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Automated Property Verification You Can Trust
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Verify property ownership and legal status instantly using official government sources. No manual uploads required.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/services">
-                  <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
-                    Start Verification
-                  </Button>
-                </Link>
-                <Link href="/how-it-works">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                    Learn More
-                  </Button>
-                </Link>
-              </div>
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="mb-8">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <Zap className="h-4 w-4 mr-2" />
+                AI-Powered Property Verification
+              </span>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                alt="Property verification documents with digital analysis"
-                className="rounded-xl shadow-2xl w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-xl"></div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              Secure Your Property
+              <span className="block text-primary">Investment</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+              India's most trusted property verification platform. Get comprehensive property reports in minutes, not months.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link href="/services">
+                <Button size="lg" className="bg-primary hover:bg-secondary text-white px-8 py-4 text-lg">
+                  <FileSearch className="mr-2 h-5 w-5" />
+                  Start Verification
+                </Button>
+              </Link>
+              <Link href="/how-it-works">
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg">
+                  <Play className="mr-2 h-5 w-5" />
+                  Watch Demo
+                </Button>
+              </Link>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                  <CheckCircle className="h-6 w-6 text-green-600" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">10,000+</div>
+                <div className="text-gray-600">Verified Properties</div>
+              </div>
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                  <Shield className="h-6 w-6 text-blue-600" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">100%</div>
+                <div className="text-gray-600">Secure & Confidential</div>
+              </div>
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
+                  <Clock className="h-6 w-6 text-purple-600" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">5 Min</div>
+                <div className="text-gray-600">Average Report Time</div>
+              </div>
             </div>
           </div>
         </div>

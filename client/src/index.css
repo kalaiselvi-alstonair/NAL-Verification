@@ -5,27 +5,30 @@
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(235, 32%, 27%);
-  --muted: hsl(235, 12%, 95%);
-  --muted-foreground: hsl(235, 8%, 46%);
+  --muted: hsl(220, 13%, 95%);
+  --muted-foreground: hsl(220, 9%, 46%);
   --popover: hsl(0, 0%, 100%);
   --popover-foreground: hsl(235, 32%, 27%);
   --card: hsl(0, 0%, 100%);
   --card-foreground: hsl(235, 32%, 27%);
-  --border: hsl(235, 12%, 91%);
-  --input: hsl(235, 12%, 91%);
-  --primary: hsl(235, 32%, 44%);
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --primary: hsl(235, 29%, 44%);
   --primary-foreground: hsl(210, 100%, 99%);
-  --secondary: hsl(235, 12%, 95%);
+  --secondary: hsl(235, 15%, 61%);
   --secondary-foreground: hsl(235, 8%, 10%);
-  --accent: hsl(235, 35%, 97%);
+  --accent: hsl(235, 25%, 78%);
   --accent-foreground: hsl(235, 8%, 10%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(210, 100%, 99%);
-  --ring: hsl(235, 32%, 27%);
+  --ring: hsl(235, 29%, 44%);
   --radius: 0.5rem;
-  --primary-light: hsl(235, 35%, 60%);
-  --primary-dark: hsl(235, 32%, 20%);
+  --primary-light: hsl(235, 15%, 61%);
+  --primary-dark: hsl(235, 29%, 20%);
   --light: hsl(235, 17%, 98%);
+  --nav-bg: hsl(235, 29%, 44%);
+  --hover-state: hsl(235, 15%, 61%);
+  --text-contrast: hsl(235, 25%, 78%);
 }
 
 .dark {
@@ -63,21 +66,29 @@
 
 @layer components {
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(235, 32%, 44%) 0%, hsl(235, 35%, 60%) 100%);
+    background: linear-gradient(135deg, #435270 0%, #6C7A9C 100%);
   }
   
   .gradient-secondary {
-    background: linear-gradient(135deg, hsl(235, 35%, 60%) 0%, hsl(235, 32%, 44%) 100%);
+    background: linear-gradient(135deg, #6C7A9C 0%, #435270 100%);
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, hsl(235, 32%, 44%) 0%, hsl(235, 35%, 60%) 100%);
+    background: linear-gradient(135deg, #435270 0%, #6C7A9C 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .hero-accent {
-    background: linear-gradient(135deg, hsl(45, 85%, 55%) 0%, hsl(0, 70%, 60%) 100%);
+  .nav-theme {
+    background-color: #435270;
+  }
+  
+  .hover-theme:hover {
+    background-color: #6C7A9C;
+  }
+  
+  .text-contrast {
+    color: #B0B7C9;
   }
 }
