@@ -18,11 +18,16 @@ export default function Navbar() {
   const [location] = useLocation();
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-white dark:bg-slate-800 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0 flex items-center">
+              <img 
+                src="/logo_1751954314114.jpg" 
+                alt="NAL India Logo" 
+                className="h-12 w-12 mr-3 rounded-lg"
+              />
               <h1 className="text-2xl font-bold text-primary">NAL India</h1>
             </Link>
           </div>

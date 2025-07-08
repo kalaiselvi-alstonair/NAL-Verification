@@ -7,7 +7,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">NAL India</h3>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/logo_1751954314114.jpg" 
+                alt="NAL India Logo" 
+                className="h-12 w-12 mr-3 rounded-lg"
+              />
+              <h3 className="text-2xl font-bold">NAL India</h3>
+            </div>
             <p className="text-slate-300 mb-4">
               India's most trusted property verification platform, powered by AI and automation.
             </p>
@@ -59,7 +66,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-slate-700 mt-12 pt-8 text-center text-slate-300">
-          <p>&copy; 2024 NAL India. All rights reserved. Built with ❤️ for Indian real estate.</p>
+          <p>&copy; 2025 NAL India. All rights reserved. Built with ❤️ for Indian real estate.</p>
         </div>
       </div>
     </footer>
