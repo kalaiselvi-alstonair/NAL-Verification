@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { insertContactSchema } from "@shared/schema";
+import { insertContactSchema } from "../../../shared/schema";
 import { MapPin, Phone, Mail, Clock, PhoneCall, MessageCircle } from "lucide-react";
 import { z } from "zod";
 
@@ -126,9 +126,9 @@ export default function Contact() {
           
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <Card className="bg-accent">
+            <Card className="bg-blue-light">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-semibold text-primary mb-6">Get Started Today</h2>
+                <h2 className="text-2xl font-semibold text-main mb-6">Get Started Today</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div>
                     <Label htmlFor="fullName">Full Name</Label>
@@ -227,9 +227,9 @@ export default function Contact() {
             </Card>
             
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-semibold text-primary mb-6">Contact Information</h2>
+            <Card className="bg-mint-light">
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-semibold text-main mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start">
@@ -243,35 +243,35 @@ export default function Contact() {
                     </div>
                   ))}
                 </div>
-              </div>
-              
-              {/* Map */}
-              <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
-                <img
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
-                  alt="Office location map"
-                  className="rounded-xl w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Support */}
-              <Card className="bg-primary text-white">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-                  <p className="mb-4">Need immediate assistance? Our support team is available round the clock.</p>
-                  <div className="flex space-x-4">
-                    <Button variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-                      <PhoneCall className="h-4 w-4 mr-2" />
-                      Call Now
-                    </Button>
-                    <Button variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-                      <MessageCircle className="h-4 w-4 mr-2" />
-                      Live Chat
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+              </CardContent>
+            </Card>
+            
+            {/* Map */}
+            <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
+              <img
+                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+                alt="Office location map"
+                className="rounded-xl w-full h-full object-cover"
+              />
             </div>
+            
+            {/* Support */}
+            <Card className="bg-primary text-white">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+                <p className="mb-4">Need immediate assistance? Our support team is available round the clock.</p>
+                <div className="flex space-x-4">
+                  <Button variant="secondary" className="bg-white text-primary hover:bg-gray-100">
+                    <PhoneCall className="h-4 w-4 mr-2" />
+                    Call Now
+                  </Button>
+                  <Button variant="secondary" className="bg-white text-primary hover:bg-gray-100">
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Live Chat
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -285,10 +285,10 @@ export default function Contact() {
           </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <Card key={index} className="shadow-lg">
+              <Card key={index} className={index % 2 === 0 ? "bg-blue-light" : "bg-purple-light"}>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-primary mb-2">{faq.question}</h3>
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <h3 className="text-lg font-semibold text-main mb-2">{faq.question}</h3>
+                  <p className="text-muted-foreground">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}

@@ -9,7 +9,8 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      // Replace old classes with new theme classes
+      "card-frosted text-main shadow-frosted border-none",
       className
     )}
     {...props}

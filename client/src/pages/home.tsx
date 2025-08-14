@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-white pt-12 pb-16 lg:pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-accent-blue text-white text-sm font-medium mb-6">
                 <Zap className="h-4 w-4 mr-2" />
                 AI-Powered Property Verification
               </span>
@@ -46,28 +46,26 @@ export default function Home() {
             
             {/* Trust Indicators */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3">
-                  <CheckCircle className="h-6 w-6 text-green-600" />
+              <div className="flex flex-col items-center text-center bg-mint-light rounded-xl p-4">
+                <div className="w-12 h-12 bg-accent-mint rounded-full flex items-center justify-center mb-3">
+                  <CheckCircle className="h-6 w-6 text-accent-mint" />
                 </div>
-                <div className="text-2xl font-bold text-gray-900 mb-1">10,000+</div>
-                <div className="text-gray-600">Verified Properties</div>
+                <div className="text-2xl font-bold text-main mb-1">10,000+</div>
+                <div className="text-muted-foreground">Verified Properties</div>
               </div>
-              
-              <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
-                  <Shield className="h-6 w-6 text-blue-600" />
+              <div className="flex flex-col items-center text-center bg-blue-light rounded-xl p-4">
+                <div className="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center mb-3">
+                  <Shield className="h-6 w-6 text-accent-blue" />
                 </div>
-                <div className="text-2xl font-bold text-gray-900 mb-1">100%</div>
-                <div className="text-gray-600">Secure & Confidential</div>
+                <div className="text-2xl font-bold text-main mb-1">100%</div>
+                <div className="text-muted-foreground">Secure & Confidential</div>
               </div>
-              
-              <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
-                  <Clock className="h-6 w-6 text-purple-600" />
+              <div className="flex flex-col items-center text-center bg-purple-light rounded-xl p-4">
+                <div className="w-12 h-12 bg-accent-purple rounded-full flex items-center justify-center mb-3">
+                  <Clock className="h-6 w-6 text-accent-purple" />
                 </div>
-                <div className="text-2xl font-bold text-gray-900 mb-1">5 Min</div>
-                <div className="text-gray-600">Average Report Time</div>
+                <div className="text-2xl font-bold text-main mb-1">5 Min</div>
+                <div className="text-muted-foreground">Average Report Time</div>
               </div>
             </div>
           </div>
@@ -78,8 +76,8 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Why Choose NAL India?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-accent-blue mb-4">Why Choose NAL India?</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Experience the future of property verification with our AI-powered platform that delivers trust and transparency.
             </p>
           </div>
@@ -88,43 +86,43 @@ export default function Home() {
               icon={Shield}
               title="100% Automated"
               description="No manual document uploads. We fetch all documents directly from government portals."
-              className="bg-accent"
+              className="bg-blue-light text-main"
             />
             <FeatureCard
               icon={Brain}
               title="AI-Powered Analysis"
               description="Advanced NLP and OCR technology ensures accurate document analysis and verification."
-              className="bg-accent"
+              className="bg-mint-light text-main"
             />
             <FeatureCard
               icon={Clock}
               title="Instant Results"
               description="Get comprehensive property verification reports in minutes, not weeks."
-              className="bg-accent"
+              className="bg-purple-light text-main"
             />
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-accent-blue text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">10,000+</div>
-              <div className="text-blue-200">Properties Verified</div>
+              <div className="text-accent-mint">Properties Verified</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">15+</div>
-              <div className="text-blue-200">Government Portals</div>
+              <div className="text-accent-purple">Government Portals</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">98%</div>
-              <div className="text-blue-200">Accuracy Rate</div>
+              <div className="text-accent-orange">Accuracy Rate</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-blue-200">Service Availability</div>
+              <div className="text-white">Service Availability</div>
             </div>
           </div>
         </div>

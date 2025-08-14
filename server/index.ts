@@ -56,15 +56,20 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+  // Try only one port (default 3000 or process.env.PORT)
+  const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+  server.listen(port, 'localhost')
+    .on('listening', () => {
+      log(`Server running at http://localhost:${port}`);
+    })
+    .on('error', (err: NodeJS.ErrnoException) => {
+      if (err.code === 'EADDRINUSE' || err.code === 'ENOTSUP') {
+        log(`Port ${port} is not available. Please free the port or use a different one.`);
+      } else if (err.code === 'EACCES') {
+        log(`Port ${port} requires elevated privileges. Try a port above 1024.`);
+      } else {
+        log(`Failed to start server: ${err.message || 'Unknown error'}`);
+      }
+      process.exit(1);
+    });
 })();

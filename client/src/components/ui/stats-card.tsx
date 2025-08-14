@@ -10,8 +10,8 @@ export default function StatsCard({ value, label, className = "" }: StatsCardPro
   return (
     <Card className={`text-center ${className}`}>
       <CardContent className="p-6">
-        <div className="text-3xl font-bold text-primary mb-2">{value}</div>
-        <div className="text-gray-600">{label}</div>
+        <div className="text-3xl font-bold text-accent mb-2">{value}</div>
+        <div className="text-main">{label}</div>
       </CardContent>
     </Card>
   );
