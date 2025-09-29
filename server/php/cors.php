@@ -9,7 +9,7 @@ ini_set('log_errors', '1');
 
 function sendJsonResponse($status, $message, $data = null, $statusCode = 200) {
     if (ob_get_length()) ob_clean();
-    header('Access-Control-Allow-Origin: http://localhost:3000');
+    header('Access-Control-Allow-Origin: http://localhost:3001');
     header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type, Accept, Authorization');
     header('Content-Type: application/json');

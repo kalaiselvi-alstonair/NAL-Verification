@@ -56,8 +56,8 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // Try only one port (default 3000 or process.env.PORT)
-  const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+  // Try only one port (default 3001 or process.env.PORT)
+  const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001;
   server.listen(port, 'localhost')
     .on('listening', () => {
       log(`Server running at http://localhost:${port}`);
